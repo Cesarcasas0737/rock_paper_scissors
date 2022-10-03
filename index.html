@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sisscors!</title>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="header">
+
+        <div class="logo">Rock Paper Sisscors</div>
+
+        <div class="score_contain">
+            <div class="score_child">
+                <div class="com_score">Com SCORE</div>
+                <div class="user_score">USER SCORE</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- have and idea for a poker like card class
+        want to add a "suit" to the appropiate card"
+        see poker card for ref-->
+        
+        <div class="cont_bot">
+            <div class="cards">
+                <!--want to combine text to the bottom of the container-->
+                
+                <!--rocks is a "card"-->
+                <div class="card">
+                    <div class="card_top"></div>
+                    <div class="card_cont">✊</div>
+                    <button class="rock_button" onclick="userChoseRock()">choose</button>
+                </div>
+
+                <div class="card">
+                    <div class="card_top"></div>
+                    <div class="card_cont">✋</div>
+                    <button class="paper_button" onclick="userChosePaper()">choose</button>
+                </div>
+
+                <div class="card">
+                    <div class="card_top"></div>
+                    <div class="card_cont">✌️</div>
+
+                    <button class="sisscor_button" value="alertMsg" onclick="userChoseSisscor()">choose</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <button class="play" onclick="randomChoice();">computer choose</button>
+        <button class="play" onclick="playRound();">play</button>
+    </div>
+
+    <div>
+</body>
+</html>

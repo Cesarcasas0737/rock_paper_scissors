@@ -1,0 +1,69 @@
+body{
+    color: black;
+    margin: 0;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo{
+    align-self: center;
+    font-size: 90px;
+
+}
+
+.score_contain{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.score_child{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    font-size: 55px;
+    
+    border: 1px solid red;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+    width: 350;
+}
+
+button{
+    padding: 8px 32px;
+    border-radius: 8px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
