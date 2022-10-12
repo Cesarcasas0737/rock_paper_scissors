@@ -38,8 +38,10 @@ function getWinner(insertUser,insertCom){
             console.log("Tie from rock");
         }else if (insertCom === "paper"){
             console.log("Lose from rock to paper");
+            comScore++;
         }else{
             console.log("Win from rock to scissor");
+            userScore++;
         }
 
     }else if(insertUser ==="paper"){
@@ -47,8 +49,10 @@ function getWinner(insertUser,insertCom){
             console.log("Tie from paper");
         }else if(insertCom === "scissor"){
             console.log("Lose from paper to scissor");
+            comScore++;
         }else{
             console.log("Win from paper to rock");
+            userScore++;
         }
 
     }else{
@@ -56,10 +60,16 @@ function getWinner(insertUser,insertCom){
             console.log("Tie from scissor ");
         }else if(insertCom === "rock"){
             console.log("Lose from scissor to rock");
+            comScore++;
         }else{
             console.log("Win from scissor to paper")
+             userScore++;
         }
     }
+}
+function updateScore(){
+    user_score.innerHTML = "User: " + userScore;
+    com_score.innerHTML = "Com: " + comScore;
 }
 
 user_score.innerHTML = "User: " + userScore;
@@ -68,8 +78,9 @@ com_score.innerHTML = "Com: " + comScore;
 userRock.addEventListener('click',() =>{
    userChoice = chooseRPS[0]
    computerChoice = getComChoice();
+
    getWinner(userChoice,computerChoice);
-   
+   updateScore()
 });
 
 userPaper.addEventListener('click',() =>{
@@ -77,6 +88,7 @@ userPaper.addEventListener('click',() =>{
     computerChoice = getComChoice();
     
    getWinner(userChoice,computerChoice);
+   updateScore()
 });
 
 userSisscor.addEventListener('click',() =>{
@@ -84,6 +96,7 @@ userSisscor.addEventListener('click',() =>{
     computerChoice = getComChoice();
 
    getWinner(userChoice,computerChoice);
+   updateScore()
 });
 
 
