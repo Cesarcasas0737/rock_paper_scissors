@@ -5,9 +5,14 @@ player chooses
 array that holds [rock,paper, sciccors]
 */
 var rounds = 5;
+var userScore = 0;
+var comScore = 0;
+
 var userChoice ="NO VALUE";
 var computerChoice ="NO VALUE";
 
+const com_score = document.querySelector("#com_score");
+const user_score = document.querySelector("#user_score");
 
 const chooseRPS = ["rock","paper","scissor"];
 
@@ -15,18 +20,18 @@ const userRock = document.querySelector('#userRock');
 const userPaper = document.querySelector('#userPaper');
 const userScissor = document.querySelector('#userSisscor');
 
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
 function getComChoice(){
     return computerChoice = chooseRPS[getRandomInt(3)];
-    //console.log("Local choice from function " + computerChoice);
+    
 }
 
 //Want to figure out hashTable and apply it
 function getWinner(insertUser,insertCom){
-   
 
     if (insertUser ==="rock"){
         if(insertUser === insertCom){
@@ -57,13 +62,16 @@ function getWinner(insertUser,insertCom){
     }
 }
 
+user_score.innerHTML = "User: " + userScore;
+com_score.innerHTML = "Com: " + comScore;
+
 userRock.addEventListener('click',() =>{
    userChoice = chooseRPS[0]
    computerChoice = getComChoice();
-
    getWinner(userChoice,computerChoice);
    
 });
+
 userPaper.addEventListener('click',() =>{
     userChoice = chooseRPS[1]
     computerChoice = getComChoice();
@@ -77,4 +85,5 @@ userSisscor.addEventListener('click',() =>{
 
    getWinner(userChoice,computerChoice);
 });
+
 
