@@ -12,6 +12,7 @@ var userChoice ="NO VALUE";
 var computerChoice ="NO VALUE";
 
 const com_score = document.querySelector("#com_score");
+const result = document.querySelector("#result");
 const user_score = document.querySelector("#user_score");
 
 const chooseRPS = ["rock","paper","scissor"];
@@ -67,6 +68,7 @@ function getWinner(insertUser,insertCom){
         }
     }
 }
+
 function updateScore(){
     user_score.innerHTML = "User: " + userScore;
     com_score.innerHTML = "Com: " + comScore;
