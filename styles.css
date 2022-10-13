@@ -63,6 +63,13 @@ button{
     border-radius: 8px;
 }
 
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 200px;
+    
+}
 
 .copyright{
     padding: 30px;

@@ -7,14 +7,17 @@ array that holds [rock,paper, sciccors]
 var rounds = 5;
 var userScore = 0;
 var comScore = 0;
+var resultDis ="";
 
 var userChoice ="NO VALUE";
 var computerChoice ="NO VALUE";
 
-const com_score = document.querySelector("#com_score");
-const result = document.querySelector("#result");
-const user_score = document.querySelector("#user_score");
+const com_score = document.querySelector('#com_score');
+const round = document.querySelector('#round')
+const user_score = document.querySelector('#user_score');
+const result = document.querySelector('#result');
 
+const resultArr =["You Won","You Lost","It's a Tie"];
 const chooseRPS = ["rock","paper","scissor"];
 
 const userRock = document.querySelector('#userRock');
