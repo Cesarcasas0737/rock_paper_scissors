@@ -41,34 +41,43 @@ function getWinner(insertUser,insertCom){
     if (insertUser ==="rock"){
         if(insertUser === insertCom){
             console.log("Tie from rock");
+            resultDis = resultArr[2];
         }else if (insertCom === "paper"){
             console.log("Lose from rock to paper");
             comScore++;
+            resultDis = resultArr[1];
         }else{
             console.log("Win from rock to scissor");
             userScore++;
+            resultDis = resultArr[0];
         }
 
     }else if(insertUser ==="paper"){
         if(insertUser === insertCom){
             console.log("Tie from paper");
+            resultDis = resultArr[2];
         }else if(insertCom === "scissor"){
             console.log("Lose from paper to scissor");
             comScore++;
+            resultDis = resultArr[1];
         }else{
             console.log("Win from paper to rock");
             userScore++;
+            resultDis = resultArr[0];
         }
 
     }else{
         if(insertUser === insertCom){
             console.log("Tie from scissor ");
+            resultDis = resultArr[2];
         }else if(insertCom === "rock"){
             console.log("Lose from scissor to rock");
             comScore++;
+            resultDis = resultArr[1];
         }else{
             console.log("Win from scissor to paper")
              userScore++;
+             resultDis = resultArr[0];
         }
     }
     playedRounds++;
@@ -79,10 +88,13 @@ function updateScore(){
     user_score.innerHTML = "User: " + userScore;
     com_score.innerHTML = "Com: " + comScore;
     round.innerHTML = "Rounds:" + playedRounds;
+    result.innerHTML= "Result is " + resultDis;
 }
 
 user_score.innerHTML = "User: " + userScore;
 com_score.innerHTML = "Com: " + comScore;
+round.innerHTML = "Rounds:" + playedRounds;
+
 
 
 userRock.addEventListener('click',() =>{
