@@ -4,16 +4,17 @@ player chooses
 
 array that holds [rock,paper, sciccors]
 */
-var rounds = 5;
+var maxWins = 5;
 var userScore = 0;
 var comScore = 0;
 var resultDis ="";
+var playedRounds = 0;
 
 var userChoice ="NO VALUE";
 var computerChoice ="NO VALUE";
 
 const com_score = document.querySelector('#com_score');
-const round = document.querySelector('#round')
+const round = document.querySelector('#rounds')
 const user_score = document.querySelector('#user_score');
 const result = document.querySelector('#result');
 
@@ -70,15 +71,19 @@ function getWinner(insertUser,insertCom){
              userScore++;
         }
     }
+    playedRounds++;
+    console.log("From if loop"+playedRounds);
 }
 
 function updateScore(){
     user_score.innerHTML = "User: " + userScore;
     com_score.innerHTML = "Com: " + comScore;
+    round.innerHTML = "Rounds:" + playedRounds;
 }
 
 user_score.innerHTML = "User: " + userScore;
 com_score.innerHTML = "Com: " + comScore;
+
 
 userRock.addEventListener('click',() =>{
    userChoice = chooseRPS[0]
