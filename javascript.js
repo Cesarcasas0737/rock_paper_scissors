@@ -42,37 +42,28 @@ function getWinner(insertUser,insertCom){
 
     if (insertUser ==="rock"){
         if(insertUser === insertCom){
-            console.log("Tie from rock");
             resultDis = resultArr[2];
         }else if (insertCom === "paper"){
-            console.log("Lose from rock to paper");
             resultDis = resultArr[1];
         }else{
-            console.log("Win from rock to scissor");
             resultDis = resultArr[0];
         }
 
     }else if(insertUser ==="paper"){
         if(insertUser === insertCom){
-            console.log("Tie from paper");
             resultDis = resultArr[2];
         }else if(insertCom === "scissor"){
-            console.log("Lose from paper to scissor");
             resultDis = resultArr[1];
         }else{
-            console.log("Win from paper to rock");
             resultDis = resultArr[0];
         }
 
     }else{
         if(insertUser === insertCom){
-            console.log("Tie from scissor ");
             resultDis = resultArr[2];
         }else if(insertCom === "rock"){
-            console.log("Lose from scissor to rock");
             resultDis = resultArr[1];
         }else{
-            console.log("Win from scissor to paper")
              resultDis = resultArr[0];
         }
 
