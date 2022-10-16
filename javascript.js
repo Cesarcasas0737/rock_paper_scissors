@@ -63,12 +63,12 @@ function getWinner(insertUser,insertCom){
 
     if (resultDis === resultArr[0]){
         userScore++;
-        //win
+        result.style.backgroundColor = "lightgreen";
     }else if(resultDis === resultArr[1]){
         comScore++;
-        //lose
+        result.style.backgroundColor = "#FFCCCB";
     }else{
-        //tie
+        result.style.backgroundColor = "beige";
     }
     playedRounds++;
     
