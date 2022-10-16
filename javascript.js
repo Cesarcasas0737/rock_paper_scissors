@@ -1,9 +1,3 @@
-/*need to make rounds
-how computer chooses
-player chooses 
-
-array that holds [rock,paper, sciccors]
-*/
 var maxWins = 5;
 var userScore = 0;
 var comScore = 0;
