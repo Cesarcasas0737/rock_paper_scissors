@@ -35,9 +35,7 @@ function getComChoice(){
     
 }
 
-//Going to rewrite logic a bit to make less repetitive with code
-//Implament a switch idea with resultDis to then direct towards the 
-//win, loss, tree where seprate things will happe.
+
 function getWinner(insertUser,insertCom){
 
     if (insertUser ==="rock"){
