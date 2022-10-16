@@ -38,7 +38,7 @@ function concludeWinner(){
         result.innerHTML = "You won the game against a computer!";
        
     }else if (comScore === maxWins){
-        result.innerHTML = "You lost to a computer...";
+        result.innerHTML = "You lost the game to a computer...";
     }
     
 }
@@ -91,7 +91,7 @@ function updateScore(){
     user_score.innerHTML = "User: " + userScore;
     com_score.innerHTML = "Com: " + comScore;
     round.innerHTML = "Rounds:" + playedRounds;
-    result.innerHTML = resultDis;
+    result.innerHTML = resultDis + " this round";
     concludeWinner();
 }
 
