@@ -28,7 +28,20 @@ function getComChoice(){
     return computerChoice = chooseRPS[getRandomInt(3)];
     
 }
-
+function concludeWinner(){
+    if (userScore === maxWins ||comScore === maxWins ){
+        document.querySelector('#userRock').disabled = true;
+        document.querySelector('#userSisscor').disabled = true;
+        document.querySelector('#userPaper').disabled = true;   
+    }
+    if (userScore === maxWins){
+        result.innerHTML = "You won the game against a computer!";
+       
+    }else if (comScore === maxWins){
+        result.innerHTML = "You lost to a computer...";
+    }
+    
+}
 
 function getWinner(insertUser,insertCom){
 
@@ -79,6 +92,7 @@ function updateScore(){
     com_score.innerHTML = "Com: " + comScore;
     round.innerHTML = "Rounds:" + playedRounds;
     result.innerHTML = resultDis;
+    concludeWinner();
 }
 
 user_score.innerHTML = "User: " + userScore;
